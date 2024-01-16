@@ -1,0 +1,138 @@
+#work {
+    margin-top: 5rem;
+}
+
+.work-wrapper {
+    margin: 0 auto;
+}
+
+.work-wrapper h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.project-wrapper {
+    position: relative;
+}
+
+.project-box {
+    margin-bottom: 2rem;
+    top: 2rem;
+    position: sticky;
+    overflow: hidden;
+}
+
+.project-box img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.project-info {
+    margin-top: -5px;
+    background-color: var(--head);
+}
+
+.project-info h2 {
+    color: white;
+    padding: 1rem;
+}
+
+.view-box {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.view-box a {
+    padding: 5px 0;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.view-box a::after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--head);
+    position: absolute;
+    display: block;
+    transition: .2s ease-in-out;
+}
+
+.view-box a:hover:after {
+    width: 0;
+}
+
+
+
+@media (min-width: 800px) {
+    .project-box {
+        margin-bottom: 0;
+        display: flex;
+        top: 80px;
+        max-width: 100%;
+    }
+
+
+    .project-box:nth-child(1) {
+        background-image: url(../../assets/dark-mosaic.png);
+    }
+
+    .project-box:nth-child(2) {
+        background-image: url(../../assets/rice-paper-3.png);
+    }
+
+    .project-box:nth-child(3) {
+        background-image: url(../../assets/assault.png);
+    }
+    
+    .project-box img {
+        width: auto;
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .project-info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        width: 700px;
+        margin-top: 0;
+        background-color: transparent;
+        transition: .2s ease-in-out;
+        transform: translate(-50%, 0);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+
+    .project-info h2 {
+        background-color: var(--head);
+        border: 2px solid var(--head);
+        opacity: 0;
+        border-radius: 5px;
+        visibility: hidden;
+        transition: .2s ease-in-out;
+    }
+
+    .project-info:hover {
+        background-color: rgb(0, 0, 0, .5);
+    }
+
+    .project-info:hover h2 {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .project-info h2:hover {
+        background-color: whitesmoke;
+        color: var(--head);
+    }
+
+    .view-box {
+        margin-top: 2rem;
+    }
+}

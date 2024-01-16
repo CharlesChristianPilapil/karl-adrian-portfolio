@@ -1,0 +1,86 @@
+.example {
+    margin-top: 3rem;
+    background-color: var(--head);
+}
+
+.example h1 {
+    padding-top: 3rem;
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+form * {
+    padding: .5rem 1rem;
+    outline: none;
+    border-radius: 5px;
+}
+
+.example textarea {
+    resize: none;
+    outline: none;
+}
+
+.example button {
+    margin: 0 auto;
+    width: fit-content;
+    cursor: pointer;
+    border: 1px solid var(--head);
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+
+.example button:hover {
+    background-color: var(--head);
+    color: white;
+    border: 1px solid white;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.imgIcon img {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .imgIcon img {
+        display: block;
+    }
+    
+    .wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    form {
+        width: 50%;
+    }
+
+    .wrapper div {
+        width: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    .imgIcon img {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 1440px) {
+    form {
+        padding: 0;
+    }
+}

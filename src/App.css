@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600;700&display=swap');
+
+:root {
+    --background: #80c4b7;
+    --dark: #e3856b;
+    --head: #032330;
+    --headFont: "Shrikhand", serif;
+    --ibmFont: 'IBM Plex Mono', monospace;
+}
+
+* {
+    font-family: var(--ibmFont);
+}
+
+h1 {
+    font-family: var(--headFont);
+    color: var(--head);
+}
+
+.main-wrapper {
+    margin: 0 auto;
+}

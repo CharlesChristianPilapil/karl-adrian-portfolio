@@ -1,0 +1,166 @@
+#about {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+}
+
+#about .about-image img {
+    width: 100%;
+}
+
+#about .intro {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about .intro h1 {
+    font-size: 2.5rem;
+}
+
+#about .about-wrapper {
+    align-items: center;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#about .experience {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#about .experience h1 {
+    text-align: center;
+}
+
+#about .experience ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about .experience ul li {
+    padding: .5rem 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--dark);
+}
+
+
+@media (min-width: 740px) {
+
+    #about .about-image {
+        position: relative;
+    }
+
+    #about .about-image img {
+        position: sticky;
+        top: 80px;
+        width: 100%;
+    }
+
+    #about {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        max-width: 1440px;
+        padding: 2rem;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+    }
+
+    #about .intro {
+        text-align: justify;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    #about .about-wrapper {
+        padding: 0;
+        gap: 10rem;
+    }
+
+    #about .experience h1 {
+        text-align: start;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    #about {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-bottom: 5rem;
+    }
+
+}
+
+* {
+    color: var(--head);
+}
+
+.about-img-animate {
+    animation: blur 1s;
+}
+
+/* Add your other styles as needed */
+.animated {
+    animation: fadeIn 1s; /* Replace with your animation properties */
+}
+
+.info-animate {
+    animation: rightLeft 1s;
+}
+
+@keyframes blur {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes rightLeft {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+@keyframes fadeIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+  
+  
+  
